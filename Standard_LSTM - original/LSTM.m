@@ -216,10 +216,6 @@ function[parameter]=Initial(parameter)
 end
 
 function[current_batch,End]=ReadTrainData(fd_s,fd_t,parameter)
-    if fd_s < 0 || fd_t < 0
-        fprintf(1,'file handler error !\n');
-        return;
-    end
     tline_s = fgets(fd_s);
     tline_t = fgets(fd_t);
     i=0;
